@@ -23,9 +23,43 @@ body {
 .btn{
   transition: all 0.2s;
 }
+.borderHover{
+  transition: all 0.3s;
+}
+.scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media(max-width:520px){
+  .nav{
+    margin-left: -4% !important;
+    margin-right: -4% !important;
+  }
+  .navHeading{
+    font-size: 20px;
+  }
+  .navBtn{
+    font-size: 16px;
+    width: 100px !important;
+  }
+}
+@media(max-width:430px){
+  .navHeading{
+    font-size: 19px;
+  }
+  .navBtn{
+    font-size: 15px;
+    width: 80px !important;
+  }
+  .quoteCard{
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
 }

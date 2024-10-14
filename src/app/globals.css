@@ -26,9 +26,9 @@ body {
 .borderHover{
   transition: all 0.3s;
 }
-.scrollbar::-webkit-scrollbar{
+/* .scrollbar::-webkit-scrollbar{
   display: none;
-}
+} */
 
 
 @layer utilities {
@@ -37,11 +37,16 @@ body {
   }
 }
 
-@media(max-width:520px){
-  .nav{
-    margin-left: -6% !important;
-    margin-right: -6% !important;
+@media(max-width:575px){
+  .cardFooter{
+    display: flex;
+    flex-direction: column;
+    gap:5px !important;
+    align-items: center;
+    margin-top: 5%;
   }
+}
+@media(max-width:520px){
   .navHeading{
     font-size: 21px !important;
   }
@@ -51,6 +56,10 @@ body {
   }
 }
 @media(max-width:430px){
+  .nav{
+    padding-right: 1.8% !important;
+    padding-left: 1.8% !important;
+  }
   .navHeading{
     font-size: 19px;
   }
@@ -59,7 +68,6 @@ body {
     width: 80px !important;
   }
   .quoteCard{
-    margin-left: 5% !important;
-    margin-right: 5% !important;
+    width: 85% !important;
   }
 }

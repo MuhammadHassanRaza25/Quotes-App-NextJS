@@ -56,9 +56,12 @@ body {
   }
 }
 @media(max-width:430px){
+  .btnDiv{
+    gap: 7px !important;
+  }
   .nav{
-    padding-right: 1.8% !important;
-    padding-left: 1.8% !important;
+    padding-right: 4% !important;
+    padding-left: 4% !important;
   }
   .navHeading{
     font-size: 19px;

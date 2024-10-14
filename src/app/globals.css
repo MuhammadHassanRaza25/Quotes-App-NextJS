@@ -39,11 +39,11 @@ body {
 
 @media(max-width:520px){
   .nav{
-    margin-left: -4% !important;
-    margin-right: -4% !important;
+    margin-left: -6% !important;
+    margin-right: -6% !important;
   }
   .navHeading{
-    font-size: 20px;
+    font-size: 21px !important;
   }
   .navBtn{
     font-size: 16px;

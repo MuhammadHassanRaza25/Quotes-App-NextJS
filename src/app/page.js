@@ -1,15 +1,12 @@
-import Link from "next/link";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import QuoteCard from "./components/QuoteCard";
 
-
 export default async function Home() {
-  
   // quotes api fetching 
   let quotes = await fetch('https://dummyjson.com/quotes') 
   quotes = await quotes.json()
-  console.log("Quotes Data ==>",quotes);
+  // console.log("Quotes Data ==>",quotes);
 
   return (
     <>

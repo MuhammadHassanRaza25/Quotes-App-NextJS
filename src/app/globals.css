@@ -33,6 +33,12 @@ body {
   }
 }
 @media(max-width:520px){
+  .errHeading{
+    font-size: 21px !important;
+  }
+  .errBtn{
+    font-size: 16px !important;
+  }
   .navHeading{
     font-size: 21px !important;
   }

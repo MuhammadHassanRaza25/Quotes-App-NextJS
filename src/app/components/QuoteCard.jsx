@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import { toast } from "sonner"
 
 export default function QuoteCard({author, quote, key}){
     
@@ -8,6 +9,7 @@ export default function QuoteCard({author, quote, key}){
   let copyFunction = ()=>{
     navigator.clipboard.writeText(quote)  //iski help se copy ho rha h.
     setCopy(quote)
+    toast.success("Copy to clipboard")
   }
   useEffect(()=>{copyFunction},[copy])
 
@@ -18,7 +20,14 @@ export default function QuoteCard({author, quote, key}){
           <h1 className="cardFooter flex items-center justify-between font-bold mt-1">
             <span>Quote By: <span className="text-emerald-400">{author}</span></span>
              <span>
-               <button title="Copy to clipboard" onClick={copyFunction} className="btn bg-emerald-200 text-black hover:bg-emerald-700 hover:text-white w-20 p-1 rounded-md font-bold">{copy? "Copied!" : "Copy"}</button>
+               {
+                copy?(
+                  <button onClick={copyFunction} className="btn bg-emerald-500 text-white w-20 p-1 rounded-md font-bold">Copied!</button>
+                )
+                :(
+                  <button onClick={copyFunction} className="btn bg-emerald-200 text-black hover:bg-emerald-500 hover:text-white w-20 p-1 rounded-md font-bold">Copy</button>
+                )
+               }
              </span>
           </h1>
         </div>

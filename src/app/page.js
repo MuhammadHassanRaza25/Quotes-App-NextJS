@@ -4,9 +4,17 @@ import QuoteCard from "./components/QuoteCard";
 
 export default async function Home() {
   // quotes api fetching 
-  let quotes = await fetch('https://dummyjson.com/quotes') 
+  let quotes = await fetch('https://dummyjson.com/quotes', {cache:"no-cache"}) //no-cache se nextjs data cache nhi karega.
+  
+  //error condition for error.js page
+  if(!quotes.ok){
+    throw new Error("API is not working!");
+  } 
+  //means agar ok true hoga to api sahi run hogi. hamne condition lagai ke agar ok false hai to hamny error de dia or error.js main get karlia.
+
   quotes = await quotes.json()
   // console.log("Quotes Data ==>",quotes);
+  
 
   return (
     <>
@@ -19,7 +27,9 @@ export default async function Home() {
         )
       })}
     
-      <Footer/>
+      <div className="mt-12">
+         <Footer/>
+      </div>
      </>
   );
 }
